@@ -51,6 +51,7 @@
 			$('#data_form')[0].reset();
 			setTimeout(function() {$('#sucss_message').html(''); modal.style.display = "none";}, 2000);
 			table_data();
+			setTimeout(function() {  pagination();}, 1500);
 	    }else if(mform == 'update'){
 	    	fetch('https://jsonplaceholder.typicode.com/posts/'+update_id, {
 			method: 'PUT',
@@ -70,6 +71,7 @@
 			$('#data_form')[0].reset();
 			setTimeout(function() {$('#sucss_message').html(''); modal.style.display = "none";}, 2000);
 			table_data();
+			setTimeout(function() {  pagination();}, 1500);
 	    }
 	    
 	    e.preventDefault();
