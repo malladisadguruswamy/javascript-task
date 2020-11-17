@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple CRUD Operations</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head> 
+<body onload="pagination();">
+	<div class="btn_div">
+		<button id="myBtnadd" class="modatn " >Add +</button><button id="myBtn" class="modatn edit" disabled="disabled" >Edit</button>
+	</div>
+	
+		<table border="1px" id="results" class="table">
+	 		<thead>
+			   	<tr>
+			     	<th>Check	</th>
+			     	<th>UserId</th>
+			     	<th>Title</th>
+			     	<th>Description</th>
+			   	</tr>
+			 </thead>
+	 		<tbody id="demo" data-position="0" data-jump="10">
+
+	 		</tbody>
+		</table>
+	<!-- <div id="pageNavPosition" class="pager-nav"></div> -->
+	<button class="less">Previous <span class="count">0</span></button>
+	<button class="more">Next <span class="count">0</span></button>
+	<div class="btn_div">
+		<button id="myBtn" class="modatn delet" disabled="disabled" >Delete</button>
+	</div>
+	<div id="snackbar">Records deleted Successfully</div>
+	<!-- The Modal -->
+	<!-- The Modal -->
+	<div id="myModal" class="modal" >
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	    <span class="close">&times;</span>
+		    <form id="data_form" action="" method="post">
+		    <h3 id="h1_name">Submit Details</h3>
+			    <fieldset>
+			      <input placeholder="Your title" type="text" name="title" id="title"   required >
+			    </fieldset>
+			    <fieldset>
+			      <textarea placeholder="Type your Description here...." id="Description" name="Description"  required></textarea>
+			    </fieldset>
+			    <fieldset>
+			      <input type="hidden" name="form" value="add" id="form">
+			      <input type="hidden" name="update" value="" id="update">
+			      <input type="hidden" name="userId" value="" id="userId">
+			      <button name="submit" type="submit" id="btn_name" data-submit="...Sending">Submit</button>
+			    </fieldset>
+			    <center><span id="sucss_message"></span></center>
+		    </form>
+	  </div>
+	</div>
+	
+</body>
+<script src="min.js"></script>
+<script type="text/javascript" language="javaScript"  src="custom.js"></script>
+</html>
